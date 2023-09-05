@@ -15,12 +15,6 @@ npm install
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
 ### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
 
 ```sh
