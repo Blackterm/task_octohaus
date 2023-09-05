@@ -8,6 +8,7 @@
           placeholder="Your text here"
           rows="5"
           cols="40"
+          data-test="messageTest"
           v-model="message"
         ></textarea>
 
@@ -26,7 +27,9 @@
               type="button"
               @click="addMessage"
             >
-              <span class="text-light mx-2">SUBMIT</span>
+              <span class="text-light mx-2" data-test="submitButton"
+                >SUBMIT</span
+              >
             </button>
           </div>
         </div>
@@ -66,10 +69,12 @@
         <el-divider class="m-0 mt-3 mb-1" border-style=" double" />
 
         <div class="d-flex p-0 m-0 mx-4 mb-2">
-          <span class="svg-icon" @click="like(item)">
+          <span class="svg-icon" @click="like(item)" data-test="likeButton">
             <img src="../../../../public/media/icons/feather-thumbs-up.svg" />
           </span>
-          <span class="ms-1 text-body-tertiary">{{ item.like }}</span>
+          <span class="ms-1 text-body-tertiary" data-test="likeCount">{{
+            item.like
+          }}</span>
           <span class="svg-icon ms-3" @click="dislike(item)">
             <img src="../../../../public/media/icons/feather-thumbs-down.svg" />
           </span>
